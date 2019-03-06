@@ -1,0 +1,31 @@
+{
+  "name": "shopify-stock-insert",
+  "version": "1.0.0",
+  "description": "NodeJS function to insert stock from a CSV file.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aswanevelder/node-shopify-stock-insert.git"
+  },
+  "keywords": [
+    "node",
+    "csv",
+    "insert"
+  ],
+  "author": "Anton Swanevelder",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aswanevelder/node-shopify-stock-insert/issues"
+  },
+  "homepage": "https://github.com/aswanevelder/node-shopify-stock-insert#readme",
+  "dependencies": {
+    "async": "^2.6.2",
+    "eol": "^0.9.1",
+    "lodash": "^4.17.11",
+    "mongodb": "^3.1.13",
+    "util": "^0.11.1"
+  }
+}
