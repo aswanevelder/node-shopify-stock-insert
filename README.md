@@ -3,8 +3,8 @@ NodeJS function to insert stock from a CSV file.
 
 **Environment Variables**
 
-**SHOPIFY_DBURL**: MongoDB Url\
-**SHOPIFY_DBNAME**: MongoDB Database name\
+**STORE_DBURL**: MongoDB Url\
+**STORE_DBNAME**: MongoDB Database name\
 **STORE_COLLECTIONNAME**: MongoDB Database Collection name for Store Stock
 
 **MongoDB Store Stock table definition**
