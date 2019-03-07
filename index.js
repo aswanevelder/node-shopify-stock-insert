@@ -39,13 +39,11 @@ exports.handler = function (event, context, callback) {
     ], function (err) {
         if (err) {
             console.error(
-                'Unable to put object' + srcBucket + '/' + srcKey +
-                ' into ' + S3TOSERVICE_TOSERVICE + ' due to an error: ' + err
+                'Unable to put object' + srcBucket + '/' + srcKey + err
             );
         } else {
             console.log(
-                'Successfully put object ' + srcBucket + '/' + srcKey +
-                ' into ' + S3TOSERVICE_TOSERVICE 
+                'Successfully put object ' + srcBucket + '/' + srcKey
             );
         }
 
@@ -72,6 +70,10 @@ function insertRecords(lines) {
                     console.log(`Try to insert collection ${x} with total records of ${data.length}`);
                     await collection.insertMany(data).then((result) => {
                         console.log("Inserted records: " + result.result.n);
+                        if (x === chunkArray.length - 1) {
+                            console.log("Waiting for DB to complete.")
+                            setTimeout(() => { client.close(); console.log("Done"); }, 60000);
+                        }
                     }).catch((err) => console.log(err));
                 }
             }
